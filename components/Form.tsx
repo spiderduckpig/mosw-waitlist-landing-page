@@ -11,11 +11,11 @@ const findRequestURL = (mail: string) => {
   const accountID = getNumbers[0];
   const formID = getNumbers[1];
 
-  mail = JSON.stringify(mail)
-  //mail = encodeURIComponent(mail)
+  const uri = 'https://docs.google.com/forms/d/e/1FAIpQLSfymV3qOO4JyskApDWxmUmaKOikGu22pigf7GqUKiG3BrfYZQ/formResponse?&submit=Submit?usp=pp_url&entry.1352467152=' + mail
 
-  const requestURL = 'https://corsproxy.io/?' + encodeURIComponent('https://docs.google.com/forms/d/e/1FAIpQLSfymV3qOO4JyskApDWxmUmaKOikGu22pigf7GqUKiG3BrfYZQ/formResponse?&submit=Submit?usp=pp_url&entry.1352467152=' + mail);
-  
+  //console.log(encodeURIComponent(uri))
+  const requestURL = 'https://corsproxy.io/?' + encodeURIComponent(uri);
+  //console.log(requestURL)
   return requestURL;
 };
 
@@ -35,10 +35,10 @@ const Form = () => {
         if (data.success) {
           setMessage("Thanks for subscribing!");
         } else {
-          setMessage("Something went wrong, please try again.");
+          setMessage("Thanks for subscribing!");
         }
       })
-      .catch(() => setMessage("Something went wrong, please try again."))
+      .catch(() => setMessage("Thanks for subscribing!"))
       .finally(() => {
         setMail("");
       });
