@@ -12,8 +12,9 @@ const findRequestURL = (mail: string) => {
   const formID = getNumbers[1];
 
   mail = JSON.stringify(mail)
+  mail = encodeURIComponent(mail)
 
-  const requestURL = encodeURIComponent(`https://corsproxy.io/?https://docs.google.com/forms/d/e/1FAIpQLSfymV3qOO4JyskApDWxmUmaKOikGu22pigf7GqUKiG3BrfYZQ/formResponse?&submit=Submit?usp=pp_url&entry.1352467152=${mail}`);
+  const requestURL = `https://corsproxy.io/?https://docs.google.com/forms/d/e/1FAIpQLSfymV3qOO4JyskApDWxmUmaKOikGu22pigf7GqUKiG3BrfYZQ/formResponse?&submit=Submit?usp=pp_url&entry.1352467152=${mail}`;
   
   return requestURL;
 };
