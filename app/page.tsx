@@ -6,9 +6,6 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <HowWorks />
-      <Price />
-      <Faq />
       <Footer />
     </main>
   );

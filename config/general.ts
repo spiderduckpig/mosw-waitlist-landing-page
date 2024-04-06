@@ -1,7 +1,7 @@
 const config = {
-    domain: "theproduct.com",
-    title: "Waitlist Page | The Product",
-    description: "Elevate your texts with the perfect emojis. Usemoji.app is coming soon! Join the waiting list for updates and exclusive access.",
+    domain: "auto-mail-ai.com",
+    title: "Waitlist Page | AutoMaiL",
+    description: "Join our fully AI-integrated marketing service",
     subscribeForm: "https://dashboard.mailerlite.com/forms/631411/101265918935434456/share",
 
     socials: {
@@ -9,30 +9,28 @@ const config = {
     },
 
     contents: {
-        title: "Discover Your Ideal Experience with The Product",
+        title: "Reach thousands of core consumers with AutoMail",
         markOfTitle: "The Product", // its for marking the title. The text must contain on title. If not, it will be ignored.
-        description: `Step into a realm of possibilities with The Product. Immerse yourself
-        in a shopping journey where intuitive features and cutting-edge design
-        come together to enhance your every selection.`,
+        description: `Utilize AutoMail's AI-powered mass communication, analytics, and response-rate optimization platform`,
 
         about: [
             {
                 id: 1,
                 emoji: "💡",
-                title: "Innovative Design",
-                description: "The Product is designed to be a seamless experience for all users. Our team has worked tirelessly to create a platform that is both intuitive and visually stunning."
+                title: "Evolutionary Design",
+                description: "By conducting A/B testing on hundreds of different email styles, we can optimize consumer interest and responsiveness"
             },
             {
                 id: 2,
                 emoji: "🚀",
-                title: "Fast and Efficient",
-                description: "We understand that your time is valuable. That's why we've optimized The Product to be as fast and efficient as possible. Spend less time shopping and more time enjoying your purchases."
+                title: "Fast, efficient, and easy to understand",
+                description: "AutoMail's analytics give you the most relevant and crucial information to know about your marketing campaign, which is key for any small business"
             },
             {
                 id: 3,
                 emoji: "🌎",
-                title: "Global Reach",
-                description: "The Product is available to users all around the world. No matter where you are, you can access our platform and discover the perfect product for you."
+                title: "Competitive pricing",
+                description: "Our rates are the lowest for digital marketing"
             }
         ],
 

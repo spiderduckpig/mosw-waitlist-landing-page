@@ -33,26 +33,14 @@ const Footer = () => {
               Legal
             </span>
             <ul className="font-medium flex flex-col gap-2 mt-4 text-activeButton">
-              <li>Terms of services</li>
-              <li>Privact policy</li>
+              <li>Terms of Service (In progress)</li>
+              <li>Privacy Policy</li>
             </ul>
           </div>
         </div>
         <div className="w-11/12 xl:w-[1050px] mx-auto pb-16">
-          © 2023 -
-          <Link
-            href="https://twitter.com/beratbozkurt0/status/1699164095994372577"
-            passHref
-            legacyBehavior
-          >
-            <a
-              target="_blank"
-              className="underline underline-offset-2"
-              rel="noopener noreferrer"
-            >
-              #buildinpublic
-            </a>
-          </Link>
+          © 2024 -
+          AutoMail
         </div>
       </div>
     </div>
