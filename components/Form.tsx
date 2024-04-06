@@ -11,7 +11,7 @@ const findRequestURL = (mail: string) => {
   const accountID = getNumbers[0];
   const formID = getNumbers[1];
 
-  const requestURL = `https://assets.mailerlite.com/jsonp/${accountID}/forms/${formID}/subscribe?fields[email]=${mail}`;
+  const requestURL = `https://docs.google.com/forms/d/e/1FAIpQLSfymV3qOO4JyskApDWxmUmaKOikGu22pigf7GqUKiG3BrfYZQ/viewform?usp=pp_url&entry.1352467152={formID}`;
 
   return requestURL;
 };
