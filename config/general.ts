@@ -18,19 +18,19 @@ const config = {
                 id: 1,
                 emoji: "💡",
                 title: "Evolutionary Design",
-                description: "By conducting A/B testing on hundreds of different email styles, we can optimize consumer interest and responsiveness"
+                description: "By conducting iteratively conducting A/B testing on hundreds of different email styles, using the highest performing email, then repeating the process, we can optimize consumer interest and responsiveness"
             },
             {
                 id: 2,
                 emoji: "🚀",
                 title: "Fast, efficient, and easy to understand",
-                description: "AutoMail's analytics give you the most relevant and crucial information to know about your marketing campaign, which is key for any small business"
+                description: "AutoMail's analytics give you the most relevant and crucial information to know about your marketing campaign, such as clickthrough rate, conversion rate, etc., which is key for any small business"
             },
             {
                 id: 3,
                 emoji: "🌎",
                 title: "Competitive pricing",
-                description: "Our rates are the lowest for digital marketing"
+                description: "Our rates are the lowest for digital marketing, using the cheapest SMTP services"
             }
         ],
 
