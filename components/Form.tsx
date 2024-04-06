@@ -66,7 +66,7 @@ const Form = () => {
           <button
             type="submit"
             className="relative sm:absolute right-2 sm:top-2 w-full sm:w-auto block  rounded-sm bg-activeButton py-3 px-4 font-medium text-white shadow hover:bg-activeButton disabled:cursor-not-allowed"
-            disabled={mail === "" || loading}
+            disabled={mail === ""}
           >
             Join Waitlist
           </button>
