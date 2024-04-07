@@ -1,9 +1,39 @@
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import {publish} from "@/app/events/events";
 import Image from "next/image";
 import Logo from "@/public/images/Sincerely_transparent.png";
 
 export default function Hero() {
+  const [mail, setMail] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>("");
+
+  const findRequestURL = (mail: string) => {
+
+    const uri = 'https://docs.google.com/forms/d/e/1FAIpQLSfymV3qOO4JyskApDWxmUmaKOikGu22pigf7GqUKiG3BrfYZQ/formResponse?&submit=Submit?usp=pp_url&entry.1352467152=' + mail
+
+    return 'https://corsproxy.io/?' + encodeURIComponent(uri);
+  };
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    fetch(findRequestURL(mail), {
+      method: "POST",
+    })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            setMessage("Thanks for subscribing!");
+          } else {
+            setMessage("Thanks for subscribing!");
+          }
+        })
+        .catch(() => setMessage("Thanks for subscribing!"))
+        .finally(() => {
+          setMail("");
+        });
+  };
 
   const buttonRef = useRef(null);
 
@@ -54,12 +84,17 @@ export default function Hero() {
               {/*<div data-aos="fade-up" data-aos-delay="600">*/}
               {/*  <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>*/}
               {/*</div>*/}
-              <form className="w-full lg:w-1/2">
+              <form className="w-full lg:w-1/2" onSubmit={onSubmit}>
                 <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                  <input type="email"
-                         className="w-full appearance-none bg-gray-800 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400"
-                         placeholder="Your best email…" aria-label="Your best email…"/>
-                  <a className="btn text-purple-100 bg-purple-600 hover:bg-purple-800 shadow" href="#0">Join</a>
+                  <input
+                      type="email"
+                      className="w-full appearance-none bg-gray-800 border border-purple-500 focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-purple-400"
+                      placeholder="Your best email…"
+                      aria-label="Your best email…"
+                      value={mail}
+                      onChange={(e) => setMail(e.target.value)}
+                  />
+                  <button className="btn text-purple-100 bg-purple-600 hover:bg-purple-800 shadow" type="submit" disabled={!mail.length}>Join</button>
                 </div>
                 {/* Success message */}
                 {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
